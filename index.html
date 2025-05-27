@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    function processProducts(products) {
+        const productNames = products.map(product => product.name);
+
+        products.forEach(({ name, price }) => {
+            const message = price > 50 ? "above $50" : "below $50";
+            console.log(`${name} is ${message}`);
+        });
+
+        return productNames;
+    }
+
+    const products = [
+        { name: "Laptop", price: 1000 },
+        { name: "Mouse", price: 20 }
+    ];
+
+    processProducts(products);
+
+</script>
